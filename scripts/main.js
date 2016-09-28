@@ -3,21 +3,22 @@
 (function() {
 
   var anchorLinks = document.querySelectorAll('.section--scroll');
-  var currentLocation;
 
-  function scrollTo(element, to, duration) {
-    if (duration <= 0) return;
-    var difference = to - element.scrollTop;
+  function scrollTo(to, duration) {
+    if (duration <= 0) {
+      return;
+    }
+
+    var difference = to - window.scrollY;
     var perTick = difference / duration * 10;
 
     setTimeout(function() {
-      element.scrollTop = element.scrollTop + perTick;
-      if (element.scrollTop === to) {
-        window.location = currentLocation;
-
+      var currentPos = window.scrollY + perTick;
+      if (currentPos === to) {
         return;
       }
-      scrollTo(element, to, duration - 10);
+      window.scroll(0, currentPos);
+      scrollTo(to, duration - 10);
     }, 10);
   }
 
@@ -26,14 +27,12 @@
     var targetName = e.target.href.split('#')[1];
     var target = document.getElementById(targetName);
     var targetTop = target.offsetTop - 10 || 0;
-    currentLocation = '#' + targetName;
 
-    scrollTo(document.body, targetTop, 600);
-
+    scrollTo(targetTop, 600);
   }
 
-  anchorLinks.forEach(function(link) {
-    link.addEventListener('click', onClick);
-  });
+  for (var i = 0; i < anchorLinks.length; i++) {
+    anchorLinks[i].addEventListener('click', onClick);
+  }
 
 })();

@@ -11,7 +11,7 @@ html {
 
 body {
   color: #2d2d2d;
-  font-family: Book Antiqua, Palatino, Palatino Linotype, Palatino LT STD, Georgia, serif;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 15px;
   margin: 0;
   overflow-x: hidden;
@@ -38,8 +38,7 @@ img {
 }
 
 .header {
-  padding-right: 1rem;
-  text-align: right;
+  padding: 0 1rem;
 }
 
 .main {
@@ -108,6 +107,7 @@ img {
     display: flex;
     justify-content: flex-end;
     position: fixed;
+    text-align: right;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -122,8 +122,13 @@ img {
     margin: .5rem 0;
   }
 
+  .header h1 span {
+    font-weight: normal;
+    letter-spacing: -.25rem;
+  }
+
   .header p {
-    margin: .5rem 0 0 1rem;
+    margin: 0 0 0 1rem;
   }
 
   .section {
@@ -141,12 +146,6 @@ img {
     text-decoration: none;
     transform: scale3d(3, .85, 1);
     width: 100%;
-  }
-
-  .section--scroll,
-  .section--scroll:after {
-    bottom: 0;
-    position: absolute;
   }
 
   .section--scroll:after {
@@ -174,7 +173,6 @@ img {
 
 @media screen and (min-width: 990px) {
   .section--content {
-    padding-bottom: 1rem;
     padding-right: 1rem;
     width: calc(50% - 1rem);
   }
