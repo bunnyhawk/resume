@@ -53,10 +53,11 @@ img {
 .section--title,
 .section--headline {
   margin-top: 0;
+  text-transform: uppercase;
 }
 
-.section--title {
-  text-transform: uppercase;
+.section--headline {
+  margin-bottom: .5rem;
 }
 
 .section--content {
