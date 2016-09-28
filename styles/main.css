@@ -1,0 +1,172 @@
+// This is un-minified on purpose so you can look at it.
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #2d2d2d;
+  font-size: 16px;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #19586d;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  letter-spacing: .075rem;
+}
+
+a {
+  color: #19586d;
+}
+
+.header {
+  padding-right: 1rem;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 30%;
+}
+
+.main {
+  line-height: 1.75rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3.5rem 1rem 0;
+  position: relative;
+}
+
+.section--title,
+.section--headline {
+  margin-top: 0;
+}
+
+.section--title {
+  text-transform: uppercase;
+}
+
+.section--content {
+  padding-right: 1rem;
+  width: calc(70% - 1rem);
+}
+
+.section--listHead {
+  font: .9rem/1.4 'Helvetica', 'Arial', sans-serif;
+  letter-spacing: .075rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.section--listHead + ul {
+  margin-top: .25rem;
+  padding-left: 2rem;
+}
+
+.section--scroll {
+  display: none;
+}
+
+.section--media {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: calc(30% - 1rem);
+}
+
+.section--media img {
+  border: 1px solid black;
+  margin-bottom: .75rem;
+  width: calc(100% - 2px);
+}
+
+.section--media .section--media_noBorder {
+  border: 0;
+  width: 100%;
+}
+
+.section--media .section--media_half {
+  width: calc(49.5% - 2px);
+}
+
+.section:first-of-type .section--media {
+  margin-top: 20%;
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    align-items: center;
+    background: rgba(255, 255, 255, .85);
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .header h1,
+  .header p {
+    display: inline-block;
+  }
+
+  .header h1 {
+    margin: .5rem 0;
+  }
+
+  .header p {
+    line-height: 1.25rem;
+    margin: 0 0 0 1rem;
+  }
+
+  .section {
+    min-height: 95vh;
+    padding-bottom: 5vh;
+  }
+
+  .section--scroll {
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+    transform: scale3d(3, .85, 1);
+    width: 100%;
+  }
+
+  .section--scroll,
+  .section--scroll:after {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .section--scroll:after {
+    content: "^";
+    cursor: pointer;
+    display: block;
+    font-size: 1.25rem;
+    margin: 0 45%;
+    text-align: center;
+    transform: rotate(180deg);
+    width: 10%;
+  }
+
+  .section--content {
+    width: calc(60% - 1rem);
+  }
+
+  .section--media {
+    margin-top: .5rem;
+    width: calc(40% - 1rem);
+  }
+
+  .section:first-of-type .section--media {
+    margin-top: 1rem;
+  }
+}
