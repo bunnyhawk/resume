@@ -41,6 +41,11 @@ img {
   padding: 0 1rem;
 }
 
+.header span {
+  font-weight: normal;
+  letter-spacing: -.25rem;
+}
+
 .main {
   line-height: 1.75rem;
 }
@@ -120,11 +125,6 @@ img {
 
   .header h1 {
     margin: .5rem 0;
-  }
-
-  .header h1 span {
-    font-weight: normal;
-    letter-spacing: -.25rem;
   }
 
   .header p {
