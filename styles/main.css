@@ -1,7 +1,12 @@
-// This is un-minified on purpose so you can look at it.
-
-* {
+/* This is un-minified on purpose so you can look at it. */
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -27,7 +32,6 @@ a {
 
 img {
   border: 1px solid black;
-  box-sizing: border-box;
   margin-bottom: .75rem;
   width: 100%;
 }
@@ -79,6 +83,13 @@ img {
   height: auto;
 }
 
+.section--column {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .section--media .section--media_noBorder {
   border: 0;
   width: 100%;
@@ -86,10 +97,6 @@ img {
 
 .section--media .section--media_half {
   width: 49%;
-}
-
-.section--media .section--media_half:first-of-type {
-  margin-right: 1%;
 }
 
 @media screen and (min-width: 800px) {
@@ -119,7 +126,6 @@ img {
   }
 
   .section {
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -167,6 +173,7 @@ img {
 
 @media screen and (min-width: 990px) {
   .section--content {
+    padding-bottom: 1rem;
     padding-right: 1rem;
     width: calc(50% - 1rem);
   }
