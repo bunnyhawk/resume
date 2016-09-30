@@ -28,10 +28,41 @@ h4 {
 }
 
 a {
-  border-bottom: 1px solid #19586d;
   color: #19586d;
-  padding-bottom: .05rem;
+  position: relative;
   text-decoration: none;
+}
+
+a:after {
+  background-color: #19586d;
+  bottom: -2px;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: all .25s linear;
+  width: 100%;
+}
+
+a:active:after,
+a:hover:after,
+a:focus:after {
+  transform: scaleY(2);
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+h3 a,
+h4 a {
+  color: #ff8413;
+}
+
+strong a {
+  font-size: .9rem;
+  text-transform: uppercase;
 }
 
 img {
@@ -85,7 +116,6 @@ img {
 
 .section--listHead + ul {
   margin-top: .25rem;
-  padding-left: 2rem;
 }
 
 .section--scroll {
@@ -114,13 +144,15 @@ img {
 }
 
 @media screen and (min-width: 800px) {
+  ul {
+    padding-left: 2rem;
+  }
+
   .header {
     align-items: center;
     background: rgba(255, 255, 255, .85);
     display: flex;
-    justify-content: flex-end;
     position: fixed;
-    text-align: right;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -163,8 +195,15 @@ img {
     font-size: 1.25rem;
     margin: 0 45%;
     text-align: center;
-    transform: rotate(180deg);
     width: 10%;
+  }
+
+  .section--scroll:after,
+  .section--scroll:active:after,
+  .section--scroll:hover:after,
+  .section--scroll:focus:after {
+    background-color: transparent;
+    transform: rotate(180deg);
   }
 
   .section--media {
