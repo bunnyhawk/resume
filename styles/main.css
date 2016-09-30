@@ -93,53 +93,53 @@ img {
   position: relative;
 }
 
-.section--title,
-.section--headline {
+.section-title,
+.section-headline {
   margin-top: 0;
   text-transform: uppercase;
 }
 
-.section--headline {
+.section-headline {
   margin-bottom: .5rem;
 }
 
-.section--content {
+.section-content {
   position: relative;
 }
 
-.section--listHead {
+.section-listHead {
   font: .85rem/1.4 'Helvetica', 'Arial', sans-serif;
   letter-spacing: .075rem;
   margin-bottom: 0;
   text-transform: uppercase;
 }
 
-.section--listHead + ul {
+.section-listHead + ul {
   margin-top: .25rem;
 }
 
-.section--scroll {
+.section-scroll {
   border-bottom: 0;
   display: none;
 }
 
-.section--media {
+.section-media {
   height: auto;
 }
 
-.section--column {
+.section-column {
   align-items: flex-start;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.section--media .section--media_noBorder {
+.section-media_noBorder {
   border: 0;
   width: 100%;
 }
 
-.section--media .section--media_half {
+.section-media_half {
   width: 49%;
 }
 
@@ -180,7 +180,7 @@ img {
     padding-bottom: 5vh;
   }
 
-  .section--scroll {
+  .section-scroll {
     display: inline-block;
     font-size: 0;
     text-decoration: none;
@@ -188,7 +188,7 @@ img {
     width: 100%;
   }
 
-  .section--scroll:after {
+  .section-scroll:after {
     content: "^";
     cursor: pointer;
     display: block;
@@ -198,33 +198,33 @@ img {
     width: 10%;
   }
 
-  .section--scroll:after,
-  .section--scroll:active:after,
-  .section--scroll:hover:after,
-  .section--scroll:focus:after {
+  .section-scroll:after,
+  .section-scroll:active:after,
+  .section-scroll:hover:after,
+  .section-scroll:focus:after {
     background-color: transparent;
     transform: rotate(180deg);
   }
 
-  .section--media {
+  .section-media {
     display: flex;
     flex-direction: column;
     margin-top: .5rem;
     width: calc(40% - 1rem);
   }
 
-  .section:first-of-type .section--media {
+  .section:first-of-type .section-media {
     margin-top: 1rem;
   }
 }
 
 @media screen and (min-width: 990px) {
-  .section--content {
+  .section-content {
     padding-right: 1rem;
     width: calc(50% - 1rem);
   }
 
-  .section--media {
+  .section-media {
     width: calc(50% - 1rem);
   }
 }
