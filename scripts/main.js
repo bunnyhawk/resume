@@ -2,7 +2,7 @@
 
 (function() {
 
-  var anchorLinks = document.querySelectorAll('.section--scroll');
+  var anchorLinks = document.querySelectorAll('.section-scroll');
 
   function scrollTo(to, duration) {
     if (duration <= 0) {
