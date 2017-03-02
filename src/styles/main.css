@@ -1,6 +1,13 @@
-/* This is un-minified on purpose so you can look at it. */
-html {
-  box-sizing: border-box;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 *,
@@ -68,6 +75,12 @@ strong a {
 img {
   vertical-align: middle;
   width: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .header {
@@ -187,8 +200,14 @@ img {
     display: flex;
     position: fixed;
     top: 0;
+    transition: transform 300ms ease-in-out;
+    transform: translateY(0);
     width: 100%;
     z-index: 1;
+  }
+
+  .header.is-hidden {
+    transform: translateY(-100%);
   }
 
   .header h1,
