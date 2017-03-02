@@ -1,0 +1,267 @@
+/* This is un-minified on purpose so you can look at it. */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #2d2d2d;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #ff8413;
+  font-family: 'Tahoma', 'Verdana', 'Segoe', sans-serif;
+  letter-spacing: .075rem;
+}
+
+a {
+  color: #19586d;
+  position: relative;
+  text-decoration: none;
+}
+
+a:after {
+  background-color: #19586d;
+  bottom: -2px;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: all .25s linear;
+  width: 100%;
+}
+
+a:active:after,
+a:hover:after,
+a:focus:after {
+  transform: scaleY(2);
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+h3 a,
+h4 a {
+  color: #ff8413;
+}
+
+strong a {
+  font-size: .9rem;
+  text-transform: uppercase;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.header {
+  padding: 0 1rem;
+}
+
+.header h1 {
+  font-size: 1.65rem;
+}
+
+.header span {
+  font-weight: normal;
+  letter-spacing: -.25rem;
+}
+
+.main {
+  line-height: 1.75rem;
+}
+
+.section {
+  padding: 0 1rem;
+  position: relative;
+}
+
+.section-title,
+.section-headline {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.section-headline {
+  margin-bottom: .5rem;
+}
+
+.section-content {
+  position: relative;
+}
+
+.section-listHead {
+  font: .85rem/1.4 'Helvetica', 'Arial', sans-serif;
+  letter-spacing: .075rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.section-listHead + ul {
+  margin-top: .25rem;
+}
+
+.section-scroll {
+  border-bottom: 0;
+  display: none;
+}
+
+.section-media {
+  height: auto;
+}
+
+.section-mediaLink {
+  box-shadow: 0 0 1px transparent;
+  display: inline-block;
+  margin-bottom: .75rem;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  vertical-align: middle;
+}
+
+.section-mediaLink:after {
+  display: none;
+}
+
+.section-mediaLink:before {
+  border: transparent solid 2px;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-duration: 300ms;
+  transition-property: border-color, top, right, bottom, left;
+}
+
+.section-mediaLink:focus:before,
+.section-mediaLink:hover:before {
+  border-color: #19586d;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  top: -8px;
+}
+
+.section-column {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section-column > img {
+  width: 49%;
+}
+
+.section-column .section-mediaLink {
+  width: 49%;
+}
+
+@media screen and (min-width: 800px) {
+  ul {
+    padding-left: 2rem;
+  }
+
+  .header {
+    align-items: center;
+    background: rgba(255, 255, 255, .85);
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .header h1,
+  .header p {
+    display: inline-block;
+  }
+
+  .header h1 {
+    margin: .5rem 0;
+  }
+
+  .header p {
+    margin: 0 0 0 1rem;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+    padding-bottom: 5vh;
+  }
+
+  .section-scroll {
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+    transform: scale3d(.75, .85, 1);
+    transition: transform .25s linear;
+    width: 100%;
+  }
+
+  .section-scroll:before {
+    content: "\2B07";
+    cursor: pointer;
+    display: block;
+    font-size: 1.25rem;
+    margin: 0 45%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 10%;
+  }
+
+  .section-scroll:after {
+    display: none;
+  }
+
+  .section-scroll:active,
+  .section-scroll:hover,
+  .section-scroll:focus {
+    transform: scaleY(1.2);
+  }
+
+  .section-media {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    width: calc(40% - 1rem);
+  }
+
+  .section:first-of-type .section-media {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .section-content {
+    padding-right: 1rem;
+    width: calc(50% - 1rem);
+  }
+
+  .section-media {
+    width: calc(50% - 1rem);
+  }
+}
