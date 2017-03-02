@@ -1,11 +1,11 @@
 import { debounce } from './util';
 
+const body = document.querySelector('body');
 const header = document.querySelector('.header');
-const pageWrap = document.querySelector('.wrapper');
 var lastScrollTop = 0;
 
 function handleScroll() {
-  return debounce(onScroll(header, pageWrap), 16);
+  return debounce(onScroll(header, body), 16);
 }
 
 export function onScroll(el, container) {
@@ -17,8 +17,6 @@ export function onScroll(el, container) {
   lastScrollTop = currScrollTop;
 }
 
-
-
-if (header && pageWrap) {
-  pageWrap.addEventListener('scroll', handleScroll);
+if (header) {
+  window.addEventListener('scroll', handleScroll);
 }

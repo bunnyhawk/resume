@@ -1,0 +1,43 @@
+.header {
+  padding: 0 1rem;
+}
+
+.header h1 {
+  font-size: 1.65rem;
+}
+
+.header span {
+  font-weight: normal;
+  letter-spacing: -.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    align-items: center;
+    background: rgba(255, 255, 255, .85);
+    display: flex;
+    position: fixed;
+    top: 0;
+    transition: transform 300ms ease-in-out;
+    transform: translateY(0);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .header.is-hidden {
+    transform: translateY(-100%);
+  }
+
+  .header h1,
+  .header p {
+    display: inline-block;
+  }
+
+  .header h1 {
+    margin: .5rem 0;
+  }
+
+  .header p {
+    margin: 0 0 0 1rem;
+  }
+}

@@ -1,0 +1,84 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #2d2d2d;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #ff8413;
+  font-family: 'Tahoma', 'Verdana', 'Segoe', sans-serif;
+  letter-spacing: .075rem;
+}
+
+a {
+  color: #19586d;
+  position: relative;
+  text-decoration: none;
+}
+
+a:after {
+  background-color: #19586d;
+  bottom: -2px;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: all .25s linear;
+  width: 100%;
+}
+
+a:active:after,
+a:hover:after,
+a:focus:after {
+  transform: scaleY(2);
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+h3 a,
+h4 a {
+  color: #ff8413;
+}
+
+strong a {
+  font-size: .9rem;
+  text-transform: uppercase;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  ul {
+    padding-left: 2rem;
+  }
+}

@@ -3,11 +3,11 @@ function scrollTo(to, duration) {
     return;
   }
 
-  var difference = to - window.scrollY;
-  var perTick = difference / duration * 10;
+  const difference = to - window.scrollY;
+  const perTick = difference / duration * 10;
 
   setTimeout(function() {
-    var currentPos = window.scrollY + perTick;
+    const currentPos = window.scrollY + perTick;
     if (currentPos === to) {
       return;
     }
@@ -18,9 +18,9 @@ function scrollTo(to, duration) {
 
 export function onAnchorClick(e) {
   e.preventDefault();
-  var targetName = e.target.href.split('#')[1];
-  var target = document.getElementById(targetName);
-  var targetTop = target.offsetTop - 10 || 0;
+  const targetName = e.target.href.split('#')[1];
+  const target = document.getElementById(targetName);
+  const targetTop = target.offsetTop || 0;
 
   scrollTo(targetTop, 600);
 }

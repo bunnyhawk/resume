@@ -5,7 +5,7 @@ import './scripts/header';
 
 const anchorLinks = document.querySelectorAll('.section-scroll');
 
-if (anchorLinks.length) {
+if (anchorLinks) {
   for (const link of anchorLinks) {
     link.addEventListener('click', onAnchorClick);
   }
