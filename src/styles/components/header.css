@@ -14,7 +14,8 @@
 @media screen and (min-width: 800px) {
   .header {
     align-items: center;
-    background: rgba(255, 255, 255, .85);
+    background: #95C1C4;
+    border-bottom: 1px solid #FFF3D8;
     display: flex;
     position: fixed;
     top: 0;

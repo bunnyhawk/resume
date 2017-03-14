@@ -4,9 +4,9 @@ function scrollTo(to, duration) {
   }
 
   const difference = to - window.scrollY;
-  const perTick = difference / duration * 10;
+  const perTick = (difference / duration) * 10;
 
-  setTimeout(function() {
+  setTimeout(() => {
     const currentPos = window.scrollY + perTick;
     if (currentPos === to) {
       return;
@@ -24,7 +24,3 @@ export function onAnchorClick(e) {
 
   scrollTo(targetTop, 600);
 }
-
-
-
-

@@ -3,6 +3,37 @@
   position: relative;
 }
 
+.section--first {
+  background: rgba(182, 169, 191, .8);
+  color: #fff;
+  min-height: 100vh;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.section:nth-child(2) {
+  background-color: rgba(202, 191, 212, .5);
+}
+
+.section:nth-child(3) {
+  background-color: rgba(170, 208, 212, .5);
+}
+
+.section:nth-child(4) {
+  background-color: rgba(149, 193, 196, .5);
+}
+
+.section:nth-child(5) {
+  background-color: rgba(149, 174, 196, .5);
+}
+
+.section--first a {
+  color: #fff;
+}
+
+.section--first a:after {
+  background-color: #fff;
+}
+
 .section-title,
 .section-headline {
   margin-top: 0;

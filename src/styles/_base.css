@@ -19,7 +19,7 @@ body {
 body {
   color: #2d2d2d;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0;
   overflow-x: hidden;
   width: 100%;
@@ -29,19 +29,20 @@ h1,
 h2,
 h3,
 h4 {
-  color: #ff8413;
+  color: #2d2d2d;
+  text-shadow: 1px 1px 1px #FFF3D8;
   font-family: 'Tahoma', 'Verdana', 'Segoe', sans-serif;
   letter-spacing: .075rem;
 }
 
 a {
-  color: #19586d;
+  color: #2d2d2d;
   position: relative;
   text-decoration: none;
 }
 
 a:after {
-  background-color: #19586d;
+  background-color: #2d2d2d;
   bottom: -2px;
   content: '';
   display: block;
@@ -64,7 +65,7 @@ ul {
 
 h3 a,
 h4 a {
-  color: #ff8413;
+  color: #2d2d2d;
 }
 
 strong a {

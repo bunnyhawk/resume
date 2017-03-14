@@ -3,6 +3,7 @@
 }
 
 .section-mediaLink {
+  border: 1px solid #FFF3D8;
   box-shadow: 0 0 1px transparent;
   display: inline-block;
   margin-bottom: .75rem;
@@ -50,6 +51,12 @@
 
 .section-column .section-mediaLink {
   width: 49%;
+}
+
+.shortList_header {
+  font-weight: 500;
+  list-style: none;
+  margin-left: -20px;
 }
 
 @media screen and (min-width: 990px) {
